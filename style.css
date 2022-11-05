@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card {
+    display: grid;
+    grid-template-areas: "product-image"
+                        "product-details";
+    border: white 1px solid;
+    border-radius: 2%;
+    margin: 35% 15%;
+    box-shadow: 0 0 10px 1px rgba(0, 208, 255, 0.381);
+    position: relative;
+    height: 450px;
+}
+
+.img{
+    grid-area: product-image;
+    margin: auto;
+}
+
+.img-front{
+    height: 300px;
+    width: 200px;
+}
+
+.img-back{
+    height: 300px;
+    width: 200px;
+    display: none;
+}
+
+.img:hover .img-front{
+    display: none;
+}
+
+.img:hover .img-back{
+    display: block;
+}
+
+#discount{
+    background-color: rgba(250, 150, 170, 0.964);
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 0 10px 2px rgba(248, 118, 144, 0.535);
+    position: absolute;
+    top: 1%;
+    left: 100%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 10px 0 0 0;
+}
+
+#discount-span{
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
+
+.product-details {
+    background-color: white;
+    grid-area: product-details;
+    position: relative;
+    top: -40%;
+    padding: 10px;
+    border-top: black 1px solid;
+    display: grid;
+    grid-template-areas:"prod-name-price" 
+                        "size"
+                        "tag-qty"
+                        "btn";
+}
+
+.prod-name-price{
+    grid-area: prod-name-price;
+    display: grid;
+    grid-template-areas: "prod-name . prod-price";
+}
+
+.prod-name{
+    grid-area: prod-name;
+    display: grid;
+    grid-template-areas: "name"
+                        "quality";
+}
+
+#name{
+    grid-area: name;
+    color: black;
+    font-weight: 600;
+}
+
+#quality{
+    grid-area: quality;
+    color: gray;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.prod-price{
+    grid-area: prod-price;
+    padding-left: 30px;
+    display: grid;
+    grid-template-areas: "price"
+                        "price-cut";
+}
+
+#price{
+    grid-area: price;
+    color: blueviolet;
+    font-weight: 800;
+}
+
+#price-cut{
+    grid-area: price-cut;
+    color: gray;
+    font-size: 13px;
+}
+
+.size{
+    margin: 15px 0px;
+    grid-area: size;
+}
+
+.tag-quantity{
+    grid-area: tag-qty;
+    display: grid;
+    grid-template-areas: "tag quantity";
+}
+
+.btn{
+    grid-area: btn;
+    display: grid;
+    grid-template-areas: "add-to-cart . buy-now";
+}
+
+input[type="radio"] {
+    appearance: none;
+    padding: 5px 7px;
+}
+
+label{
+    font-size: 13px;
+    color: gray;
+    padding: 7px;
+}
+
+input[type="radio"]:checked+label {
+    background-color: blueviolet;
+    border-radius: 50%;
+    color: white;
+}
+
+.tag{
+    grid-area: tag;
+    color: white;
+    background-color: rgba(250, 150, 170, 0.964);
+    border-radius: 50px;
+    font-size: 12px;
+    width: 110px;
+    margin: 5px 0 5px 10px;
+}
+
+.tag-name{
+    position: relative;
+    top: 13%;
+    left: 10%;
+}
+
+.quantity{
+    grid-area: quantity;
+    margin-left: 5%;
+}
+
+.inc-dec {
+    border: none;
+    color: rgb(2, 125, 2);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 30px;
+    height: 35px;
+    margin: 0 5px;
+    background-color: rgba(173, 246, 173, 0.718);
+}
+
+.btn button{
+    border: none;
+    border-radius: 5px;
+    margin: 20px 10px;
+    font-size: 13px;
+    padding: 10px;
+    color: white;
+}
+
+.add-to-cart {
+    grid-area: add-to-cart;
+    background-color: rgb(243, 243, 60);
+}
+
+.buy-now {
+    grid-area: buy-now;
+    background-color: rgb(248, 178, 50);
+}

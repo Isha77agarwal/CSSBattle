@@ -1,13 +1,3 @@
-<!-- 
-    Problem Statement 2
-
-    Event: CSS Battle
-    Tagline: Battle It Out - The CSS Version
-    Problem Statement designed by: 
-    Prakhar Gupta
-    (MCA Final Year)
-    Departmental Co-ordinator, CSED
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +9,20 @@
 </head>
 <body>
     <div class="product-card">
-        <span id="discount">- 18%</span>
+        <span id="discount"><span id="discount-span">-18%</span></span>
         <div class="img">
-            <img src="tshirt.jpeg"> <!-- You can change this line -->
+            <img src="tshirt.jpeg" class="img-front">
+            <img src="back.jpeg" class="img-back">
         </div>
         <div class="product-details">
             <div class="prod-name-price">
                 <div class="prod-name">
-                    <span>Addidas Original</span>
-                    <span>Premium Quality T-Shirt</span>
+                    <span id="name">Addidas Original</span>
+                    <span id="quality">Premium Quality T-Shirt</span>
                 </div>
                 <div class="prod-price">
-                    <span>₹290</span>
-                    <span><s>₹400</s></span>
+                    <span id="price">₹290</span>
+                    <span id="price-cut"><s>₹400</s></span>
                 </div>
             </div>
             <div class="size">
@@ -48,17 +39,17 @@
             </div>
             <div class="tag-quantity">
                 <div class="tag">
-                    <span>Application Club</span>
+                    <span class="tag-name">Application Club</span>
                 </div>
                 <div class="quantity">
-                    <button>+</button>
+                    <button class="inc-dec">+</button>
                     <span>2</span>
-                    <button>-</button>
+                    <button class="inc-dec">-</button>
                 </div>
             </div>
             <div class="btn">
-                <button type="submit">Add To Cart</button>
-                <button type="submit">Buy Now</button>
+                <button type="submit" class="add-to-cart">Add To Cart</button>
+                <button type="submit" class="buy-now">Buy Now</button>
             </div>
         </div>
     </div>
